@@ -1,17 +1,10 @@
-MNIST Handwritten Digit Classifier
+Handwritten Digit Classifier
 ==================================
 
-An implementation of multilayer neural network using `numpy` library. The implementation 
-is a modified version of Michael Nielsen's implementation in 
-[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) book. 
+An implementation of multilayer neural network using keras.
 
 
 ### Brief Background:
-
-If you are familiar with basics of Neural Networks, feel free to skip this section. For 
-total beginners who landed up here before reading anything about Neural Networks:
-
-![Sigmoid Neuron](http://i.imgur.com/dOkT9Y9.png)
 
 * Neural networks are made up of building blocks known as **Sigmoid Neurons**. These are 
 named so because their output follows [Sigmoid Function](https://en.wikipedia.org/wiki/Sigmoid_function).
