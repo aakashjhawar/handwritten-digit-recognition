@@ -8,7 +8,7 @@ The MNIST database (Modified National Institute of Standards and Technology data
 
 
 ### Structure of Neural Network:
-* A neural network is made up by stacking layers of neurons, and is defined by the weights 
+A neural network is made up by stacking layers of neurons, and is defined by the weights 
 of connections and biases of neurons. Activations are a result dependent on a certain input.
 
 * Neural networks are made up of building blocks known as **Sigmoid Neurons**. These are 
@@ -18,3 +18,7 @@ neuron has its intrinsic bias **b**. The output of neuron is known as "activatio
 
 ![Small Labelled Neural Network](http://i.imgur.com/HdfentB.png)
 
+## Execution
+
+* Run the 'cnn.py' file.
+* You can also run the 'load_model.py' to skip the computation of NN. It will load the pre saved model from 'model.json' and 'model.h5' file.

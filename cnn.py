@@ -27,26 +27,20 @@ y_train = np_utils.to_categorical(y_train)
 y_test = np_utils.to_categorical(y_test)
 num_classes = y_test.shape[1]
 
-# define the larger model
-def larger_model():
-	# create model
-	model = Sequential()
-	model.add(Conv2D(30, (5, 5), input_shape=(1, 28, 28), activation='relu'))
-	model.add(MaxPooling2D(pool_size=(2, 2)))
-	model.add(Conv2D(15, (3, 3), activation='relu'))
-	model.add(MaxPooling2D(pool_size=(2, 2)))
-	model.add(Dropout(0.2))
-	model.add(Flatten())
-	model.add(Dense(128, activation='relu'))
-	model.add(Dense(50, activation='relu'))
-	model.add(Dense(num_classes, activation='softmax'))
-	# Compile model
-	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-	return model
+# create model
+model = Sequential()
+model.add(Conv2D(32, (5, 5), input_shape=(1, 28, 28), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Conv2D(16, (3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.2))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(num_classes, activation='softmax'))
+# Compile model
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-
-# build the model
-model = larger_model()
 # Fit the model
 model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=200)
 # Final evaluation of the model
@@ -65,7 +59,7 @@ print('Prediction of loaded_model: {}'.format(model_pred[0]))
 import matplotlib.pyplot as plt
 
 # grab some test images from the test data
-test_images = X_test[1:4]
+test_images = X_test[1:5]
 
 # reshape the test images to standard 28x28 format
 test_images = test_images.reshape(test_images.shape[0], 28, 28)
@@ -90,7 +84,7 @@ for i, test_image in enumerate(test_images, start=1):
 plt.show()
 
 
-# - - - - - - - SAVE AND LOAD - - - - - - - -
+# - - - - - - - SAVE THE MODEL - - - - - - - -
 
 # serialize model to JSON
 model_json = model.to_json()
@@ -100,27 +94,3 @@ with open("model.json", "w") as json_file:
 model.save_weights("model.h5")
 print("Saved model to disk")
  
-# later...
- 
-# load json and create model
-from keras.models import model_from_json
-
-json_file = open('model.json', 'r')
-loaded_model_json = json_file.read()
-json_file.close()
-loaded_model = model_from_json(loaded_model_json)
-# load weights into new model
-loaded_model.load_weights("model.h5")
-print("Loaded model from disk")
- 
-# evaluate loaded model on test data
-(trainData, trainLabels), (testData, testLabels) = mnist.load_data()
-#image_test = X_train[7131]
-image_test = cv2.imread('images/5a.jpg', 0)
-image_test_1 = cv2.resize(image_test, (28,28))    # For plt.imshow
-image_test_2 = image_test_1.reshape(1,1,28,28)    # For input to model.predict_classes
-
-
-cv2.imshow('number', image_test_1)
-loaded_model_pred = loaded_model.predict_classes(image_test_2, verbose = 0)
-print('Prediction of loaded_model: {}'.format(loaded_model_pred[0]))
