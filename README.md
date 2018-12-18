@@ -24,4 +24,5 @@ neuron has its intrinsic bias **b**. The output of neuron is known as "activatio
 * You can also run the `load_model.py` to skip the computation of NN. It will load the pre saved model from `model.json` and `model.h5` file.
 
 ## Result:
+Following image is the prediction of the model.
 ![Result of CNN model](https://github.com/aakashjhawar/Handwritten-Digit-Recognition/blob/master/result.png)

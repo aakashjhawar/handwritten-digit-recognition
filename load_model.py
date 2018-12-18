@@ -14,9 +14,7 @@ print("Loaded model from disk")
  
 # evaluate loaded model on test data
 import cv2
-#(trainData, trainLabels), (testData, testLabels) = mnist.load_data()
-#image_test = X_train[7131]
-image_test = cv2.imread('dataset/6c.jpg', 0)
+image_test = cv2.imread('dataset/6c.jpg', 0)      # Predict images from dataset folder
 image_test_1 = cv2.resize(image_test, (28,28))    # For plt.imshow
 image_test_2 = image_test_1.reshape(1,1,28,28)    # For input to model.predict_classes
 
