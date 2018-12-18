@@ -1,10 +1,15 @@
-Handwritten Digit Classifier
+MNIST Handwritten Digit Classifier
 ==================================
 
 An implementation of multilayer neural network using keras.
 
+### About MNIST dataset:
+The MNIST database (Modified National Institute of Standards and Technology database) of handwritten digits consists of a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. Additionally, the black and white images from NIST were size-normalized and centered to fit into a 28x28 pixel bounding box and anti-aliased, which introduced grayscale levels.
 
 ### Brief Background:
+
+
+![Sigmoid Neuron](http://i.imgur.com/dOkT9Y9.png)
 
 * Neural networks are made up of building blocks known as **Sigmoid Neurons**. These are 
 named so because their output follows [Sigmoid Function](https://en.wikipedia.org/wiki/Sigmoid_function).
@@ -18,23 +23,7 @@ now is sufficient for beginners._
 of connections and biases of neurons. Activations are a result dependent on a certain input.
 
 
-### Why a modified implementation ?
-
-This book and Stanford's Machine Learning Course by Prof. Andrew Ng are recommended as 
-good resources for beginners. At times, it got confusing to me while referring both resources:
-
-MATLAB has _1-indexed_ data structures, while `numpy` has them _0-indexed_. Some parameters 
-of a neural network are not defined for the input layer, so there was a little mess up in 
-mathematical equations of book, and indices in code. For example according to the book, the 
-bias vector of second layer of neural network was referred as `bias[0]` as input layer (first 
-layer) has no bias vector. I found it a bit inconvenient to play with.
-
-I am fond of Scikit Learn's API style, hence my class has a similar structure of code. While 
-theoretically it resembles the book and Stanford's course, you can find simple methods such 
-as `fit`, `predict`, `validate` to train, test, validate the model respectively.
-
-
-### Naming and Indexing Convention:
+### Structure of Neural Network:
 
 I have followed a particular convention in indexing quantities.
 Dimensions of quantities are listed according to this figure.
