@@ -20,5 +20,5 @@ neuron has its intrinsic bias **b**. The output of neuron is known as "activatio
 
 ## Execution
 
-* Run the 'cnn.py' file.
+* Run the `cnn.py` file.
 * You can also run the 'load_model.py' to skip the computation of NN. It will load the pre saved model from 'model.json' and 'model.h5' file.
