@@ -18,7 +18,10 @@ neuron has its intrinsic bias **b**. The output of neuron is known as "activatio
 
 ![Small Labelled Neural Network](http://i.imgur.com/HdfentB.png)
 
-## Execution
+## Execution:
 
 * Run the `cnn.py` file.
-* You can also run the 'load_model.py' to skip the computation of NN. It will load the pre saved model from 'model.json' and 'model.h5' file.
+* You can also run the `load_model.py` to skip the computation of NN. It will load the pre saved model from `model.json` and `model.h5` file.
+
+## Result:
+![Result of CNN model](https://github.com/aakashjhawar/Handwritten-Digit-Recognition/blob/master/result.png)
