@@ -11,11 +11,11 @@ The MNIST database (Modified National Institute of Standards and Technology data
 A neural network is made up by stacking layers of neurons, and is defined by the weights 
 of connections and biases of neurons. Activations are a result dependent on a certain input.
 
-* Neural networks are made up of building blocks known as **Sigmoid Neurons**. These are 
-named so because their output follows [Sigmoid Function](https://en.wikipedia.org/wiki/Sigmoid_function).
-* **x<sub>j</sub>** are inputs, which are weighted by **w<sub>j</sub>** weights and the 
-neuron has its intrinsic bias **b**. The output of neuron is known as "activation ( **a** )".
+This structure is known as a feedforward architecture because the connections in the network flow forward from the input layer to the output layer without any feedback loops. In this figure:
 
+* The input layer contains the predictors.
+* The hidden layer contains unobservable nodes, or units. The value of each hidden unit is some function of the predictors; the exact form of the function depends in part upon the network type and in part upon user-controllable specifications.
+* The output layer contains the responses. Since the history of default is a categorical variable with two categories, it is recoded as two indicator variables. Each output unit is some function of the hidden units. Again, the exact form of the function depends in part on the network type and in part on user-controllable specifications.
 ![Small Labelled Neural Network](http://i.imgur.com/HdfentB.png)
 
 ## Execution:
