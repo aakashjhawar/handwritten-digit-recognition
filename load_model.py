@@ -18,7 +18,6 @@ image_test = cv2.imread('dataset/6c.jpg', 0)      # Predict images from dataset 
 image_test_1 = cv2.resize(image_test, (28,28))    # For plt.imshow
 image_test_2 = image_test_1.reshape(1,1,28,28)    # For input to model.predict_classes
 
-
 #cv2.imshow('number', image_test_1)
 loaded_model_pred = loaded_model.predict_classes(image_test_2, verbose = 0)
 print('Prediction of loaded_model: {}'.format(loaded_model_pred[0]))
