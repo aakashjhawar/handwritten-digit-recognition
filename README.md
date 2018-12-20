@@ -18,17 +18,30 @@ This structure is known as a feedforward architecture because the connections in
 * The output layer contains the responses. Since the history of default is a categorical variable with two categories, it is recoded as two indicator variables. Each output unit is some function of the hidden units. Again, the exact form of the function depends in part on the network type and in part on user-controllable specifications.
 ![Small Labelled Neural Network](http://i.imgur.com/HdfentB.png)
 
-## Execution:
+## Getting Started
 
-* Run the `cnn.py` file.
-* You can also run the `load_model.py` to skip the computation of NN. It will load the pre saved model from `model.json` and `model.h5` file.
-
-```python3 load_model.py <path/to/image_file>
+How to use
+```    
+git clone https://github.com/aakashjhawar/Handwritten-Digit-Recognition.git
+cd Handwritten-Digit-Recognition
+python3 cnn.py 
+```
+* You can also run the `load_model.py` to skip the training of NN. It will load the pre saved model from `model.json` and `model.h5` files.
+```
+python3 load_model.py <path/to/image_file>
 ```
 For example
-```python3 load_model.py images/1a.jpg 
 ```
+python3 load_model.py images/1a.jpg 
+```
+ 
+## Prerequisites
 
+- Python 3.5
+- OpenCV
+```
+sudo apt-get install python-opencv
+``` 
 ## Result:
 Following image is the prediction of the model.
 ![Result of CNN model](https://github.com/aakashjhawar/Handwritten-Digit-Recognition/blob/master/result.png)
