@@ -23,6 +23,12 @@ This structure is known as a feedforward architecture because the connections in
 * Run the `cnn.py` file.
 * You can also run the `load_model.py` to skip the computation of NN. It will load the pre saved model from `model.json` and `model.h5` file.
 
+```python3 load_model.py <path/to/image_file>
+```
+For example
+```python3 load_model.py images/1a.jpg 
+```
+
 ## Result:
 Following image is the prediction of the model.
 ![Result of CNN model](https://github.com/aakashjhawar/Handwritten-Digit-Recognition/blob/master/result.png)
