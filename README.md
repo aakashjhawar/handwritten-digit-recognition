@@ -19,7 +19,9 @@ This structure is known as a feedforward architecture because the connections in
 ![Small Labelled Neural Network](http://i.imgur.com/HdfentB.png)
 
 
-Summary of Sequential model
+#### Summary of Sequential model
+
+
 ![Summary](https://github.com/aakashjhawar/Handwritten-Digit-Recognition/blob/master/model_summary.png)
 
 ## Getting Started
