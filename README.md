@@ -30,7 +30,8 @@ How to use
 ```    
 git clone https://github.com/aakashjhawar/Handwritten-Digit-Recognition.git
 cd Handwritten-Digit-Recognition
-python3 cnn.py 
+pip3 install -r requirements.txt 
+python3 tf_cnn.py
 ```
 * You can also run the `load_model.py` to skip the training of NN. It will load the pre saved model from `model.json` and `model.h5` files.
 ```
@@ -38,7 +39,7 @@ python3 load_model.py <path/to/image_file>
 ```
 For example
 ```
-python3 load_model.py images/1a.jpg 
+python3 load_model.py assets/images/1a.jpg 
 ```
  
 ## Prerequisites
