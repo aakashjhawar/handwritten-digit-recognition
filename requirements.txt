@@ -1,0 +1,7 @@
+h5py==2.10.0
+Keras==2.4.3
+Keras-Preprocessing==1.1.2
+matplotlib==3.3.2
+numpy==1.18.5
+opencv-python==4.4.0.44
+tensorflow==2.3.1
