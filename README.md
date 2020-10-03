@@ -22,7 +22,7 @@ This structure is known as a feedforward architecture because the connections in
 #### Summary of Sequential model
 
 
-![Summary](https://github.com/aakashjhawar/Handwritten-Digit-Recognition/blob/master/model_summary.png)
+![Summary](https://github.com/aakashjhawar/handwritten-digit-recognition/blob/master/assets/model/model_summary.png)
 
 ## Getting Started
 
