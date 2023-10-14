@@ -52,3 +52,4 @@ sudo apt-get install python-opencv
 ## Result:
 Following image is the prediction of the model.
 ![Result of CNN model](https://github.com/aakashjhawar/Handwritten-Digit-Recognition/blob/master/result.png)
+
